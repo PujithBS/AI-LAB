@@ -52,9 +52,9 @@ def solveMazeUtil(maze, x, y, sol):
 if __name__ == "__main__":
     # Initialising the maze
     maze = [[1, 1, 1, 1],
-            [1, 0, 1, 1],
-            [1, 1, 0, 0]
-            [0, 1, 1, 1]]
+                  [1, 0, 1, 1],
+                  [1, 1, 0, 0],
+                  [0, 1, 1, 1]]
     print('intial maze: 1:reachable path 0: unreachable path \n')
     for i in maze:
         print(i,'\n')
