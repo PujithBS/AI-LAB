@@ -1,4 +1,4 @@
-N = 4
+N = 5
 def printSolution(sol):
     for i in sol:
         for j in i:
@@ -11,10 +11,8 @@ def isSafe(maze, x, y):
 
     return False
 
-
-
 def solveMaze(maze):
-    sol = [[0 for j in range(4)] for i in range(4)]
+    sol = [[0 for j in range(5)] for i in range(5)]
 
     if solveMazeUtil(maze, 0, 0, sol) == False:
         print("Solution doesn't exist");
@@ -23,19 +21,15 @@ def solveMaze(maze):
     printSolution(sol)
     return True
 
-
-
 def solveMazeUtil(maze, x, y, sol):
 
     if x == N - 1 and y == N - 1:
         sol[x][y] = 1
         return True
 
-
     if isSafe(maze, x, y) == True:
 
         sol[x][y] = 1
-
 
         if solveMazeUtil(maze, x + 1, y, sol) == True:
             return True
@@ -48,14 +42,13 @@ def solveMazeUtil(maze, x, y, sol):
         sol[x][y] = 0
         return False
 
-
 if __name__ == "__main__":
-    # Initialising the maze
-    maze = [[1, 1, 1, 1],
-                  [1, 0, 1, 1],
-                  [1, 1, 0, 0],
-                  [0, 1, 1, 1]]
-    print('intial maze: 1:reachable path 0: unreachable path \n')
+    maze = [[1, 1, 1, 0, 1],
+            [1, 0, 1, 0, 1],
+            [1, 1, 0, 0, 0],
+            [0, 1, 1, 1, 0],
+            [0, 0, 0, 1, 1]]
+    print('Rule ::\t1:reachable path 0: unreachable path \nInitial maze\n')
     for i in maze:
         print(i,'\n')
     print('final path')
