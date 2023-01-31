@@ -109,6 +109,8 @@ def unify(exp1, exp2):
       res.append(st)
 
     return res
+    
+    
 exp1 = input("Enter first expression: ")
 exp2 = input("Enter second expression: ")
 
