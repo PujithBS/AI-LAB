@@ -109,3 +109,12 @@ def unify(exp1, exp2):
       res.append(st)
 
     return res
+exp1 = input("Enter first expression: ")
+exp2 = input("Enter second expression: ")
+
+#exp1 = "knows(John,x)"
+#exp2 = "knows(y,Bill)"
+
+subs = unify(exp1, exp2)
+print("Substitutions:")
+print(subs)
