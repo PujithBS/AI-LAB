@@ -109,5 +109,3 @@ def unify(exp1, exp2):
       res.append(st)
 
     return res
-    
-    
