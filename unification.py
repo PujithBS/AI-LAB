@@ -4,7 +4,7 @@ def getAttributes(expr):
     expr = expr.split("(")[1:]
     expr = "(".join(expr)
     expr = expr[:-1]
-    expr = re.split("(?<!.),?!.)", expr)
+    expr = re.split("(?<!.)", expr)
     return expr
      
 
